@@ -5,5 +5,11 @@
 package statistics.dist;
 
 public class Distributions {
-
+	
+	
+	//----Distribution List----//
+	//Binomial
+	//Poisson
+	//Exponential
+	
 }
