@@ -79,6 +79,7 @@ public class BasicStats <T extends Number> {
 		return (arrSum/arr.length);
 	}
 	
+	@SafeVarargs
 	public final double mean(T a, T ...b){
 		return ((mean(b)*b.length)+a.doubleValue())/(b.length+1);
 	}
@@ -192,6 +193,7 @@ public class BasicStats <T extends Number> {
 		return Math.sqrt(sumSquared/arr.length);
 	}
 	
+	@SafeVarargs
 	public final double standardDev(T a, T ...b){
 		
 		double meanArr = mean(a, b);
