@@ -2,6 +2,7 @@
 
 * [Requirements](#requirements)
 * [What is RavMath?](#what-is-ravmath?)
+* [Using RavMath](#using-ravmath)
 * [Library Functionalities](#library-functionalities)
   * [Basic Statistics](###basic-statistics)
   * [Probability Distribution Modelling](###probability-distribution-modelling)
@@ -30,11 +31,16 @@ The second option is to download the appropriate ```.deb``` package directly fro
 
 Navigate to [Oracle Site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and download the appropriate package.
 
-
 ## What is RavMath?
-RavMath is a multifunctional statistics library...
+RavMath is a multifunctional statistics library that allows users to carry out basic and advanced statistic calculations on 1D and 2D datasets.
+
+This ranges from simple operations such as the mean & standard deviations to data-modelling operations such as linear regression. 
+
+## Using RavMath
+
 
 ## Library Functionalities
+
 
 ### Basic statistics
 

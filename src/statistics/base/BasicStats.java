@@ -205,4 +205,6 @@ public class BasicStats <T extends Number> {
 		
 		return Math.sqrt(sumSquared/(b.length+1));
 	}
+	
+	
 }
