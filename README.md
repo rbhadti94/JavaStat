@@ -1,7 +1,7 @@
 # RavMath - A Statistics Library
 
 * [Requirements](#requirements)
-* [What is RavMath?](#What-Is-RavMath?)
+* [What is RavMath?](#what-is-ravmath?)
 * [Library Functionalities](#library-functionalities)
   * [Basic Statistics](###basic-statistics)
   * [Probability Distribution Modelling](###probability-distribution-modelling)
