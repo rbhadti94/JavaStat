@@ -1,4 +1,6 @@
 /**
+ * Class: RavMath.base.BasicStats 
+ * 
  * @author Ravindra Bhadti
  * @V1.0
  */
@@ -8,7 +10,7 @@ package statistics.base;
 import java.util.HashMap;
 
 
-public class BasicStats <T extends Number> {
+public strictfp class BasicStats <T extends Number> {
 	
 	//---STAT BASIC METHOD---//
 	//mean.
@@ -18,6 +20,12 @@ public class BasicStats <T extends Number> {
 	//standard deviation
 	//interquartile range.
 
+	/**
+	 * This class is non-instansiable.
+	 */
+	private BasicStats(){
+		//No body.
+	}
 	
 	public final double mean(int a, int ...b){ 
 		return ((mean(b)*b.length)+a)/(b.length+1);
