@@ -5,7 +5,10 @@
 
 package statistics.base;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class BasicStats <T extends Number> {
 	
@@ -18,11 +21,11 @@ public class BasicStats <T extends Number> {
 	//interquartile range.
 
 	
-	public int mean(int a, int ...b){ 
+	public double mean(int a, int ...b){ 
 		return ((mean(b)*b.length)+a)/(b.length+1);
 	}
 	
-	public int mean(int[] arr){
+	public double mean(int[] arr){
 		
 		double arrSum = 0;
 		
@@ -30,24 +33,37 @@ public class BasicStats <T extends Number> {
 			arrSum+=arr[i];
 		}
 		
-		return (int)(arrSum/arr.length);
+		return (arrSum/arr.length);
 		
 	}
 	
-	public long mean(long a, long ...b){
+	public double mean(long a, long ...b){
 		return ((mean(b)*b.length)+a)/(b.length+1);
 	}
 	
-	public long mean(long[] arr){
-		return 0;
+	public double mean(long[] arr){
+		double arrSum = 0;
+		
+		for(int i = 0; i < arr.length; i++){
+			arrSum+=arr[i];
+		}
+		
+		return (arrSum/arr.length);
 	}
 	
-	public float mean(float a, float ...b){
+	public double mean(float a, float ...b){
 		return ((mean(b)*b.length)+a)/(b.length+1);
 	}
 	
-	public float mean(float[] arr){
-		return 0;
+	public double mean(float[] arr){
+		
+		double arrSum = 0;
+		
+		for(int i = 0; i < arr.length; i++){
+			arrSum+=arr[i];
+		}
+		
+		return (arrSum/arr.length);
 	}
 	
 	public double mean(double a, double ...b){
@@ -55,7 +71,14 @@ public class BasicStats <T extends Number> {
 	}
 	
 	public double mean(double[] arr){
-		return 0;
+		
+		double arrSum = 0;
+		
+		for(int i = 0; i < arr.length; i++){
+			arrSum+=arr[i];
+		}
+		
+		return (arrSum/arr.length);
 	}
 	
 	public double mean(T a, T ...b){
@@ -77,27 +100,108 @@ public class BasicStats <T extends Number> {
 		return null;
 	}
 	
+	public double standardDev(int[] arr){
+		double sumSquared = 0;
+		double meanArr = mean(arr);
+		
+		for(int i = 0; i < arr.length; i++){
+			sumSquared+=(arr[i]-meanArr)*(arr[i]-meanArr);
+		}
+		
+		return Math.sqrt(sumSquared/arr.length);
+	}
+	
+	public double standardDev(long[] arr){
+		double sumSquared = 0;
+		double meanArr = mean(arr);
+		
+		for(int i = 0; i < arr.length; i++){
+			sumSquared+=(arr[i]-meanArr)*(arr[i]-meanArr);
+		}
+		
+		return Math.sqrt(sumSquared/arr.length);
+	}
+	
+	public double standardDev(float []arr){
+		double sumSquared = 0;
+		double meanArr = mean(arr);
+		
+		for(int i = 0; i < arr.length; i++){
+			sumSquared+=(arr[i]-meanArr)*(arr[i]-meanArr);
+		}
+		
+		return Math.sqrt(sumSquared/arr.length);
+	}
+	
+	public double standardDev(double []arr){
+		double sumSquared = 0;
+		double meanArr = mean(arr);
+		
+		for(int i = 0; i < arr.length; i++){
+			sumSquared+=(arr[i]-meanArr)*(arr[i]-meanArr);
+		}
+		
+		return Math.sqrt(sumSquared/arr.length);
+	}
+	
 	public double standardDev(int a, int ...b){
-		return 0;
+		double meanArr = mean(a, b);
+		double sumSquared=Math.pow((a-meanArr), 2);
+		
+		for (int i = 0; i < b.length; i++){
+			sumSquared+=Math.pow((b[i]-meanArr), 2);
+		}
+		return Math.sqrt(sumSquared/(b.length+1));
 	}
 	
 	public double standardDev(long a, long ...b){
-		return 0;
+		double meanArr = mean(a, b);
+		double sumSquared=Math.pow((a-meanArr), 2);
+		
+		for (int i = 0; i < b.length; i++){
+			sumSquared+=Math.pow((b[i]-meanArr), 2);
+		}
+		return Math.sqrt(sumSquared/(b.length+1));
 	}
 	
 	public double standardDev(float a, float ...b){
-		return 0;
+		double meanArr = mean(a, b);
+		double sumSquared=Math.pow((a-meanArr), 2);
+		
+		for (int i = 0; i < b.length; i++){
+			sumSquared+=Math.pow((b[i]-meanArr), 2);
+		}
+		return Math.sqrt(sumSquared/(b.length+1));
 	}
 	
 	public double standardDev(double a, double ...b){
-		return 0;
+		double meanArr = mean(a, b);
+		double sumSquared=Math.pow((a-meanArr), 2);
+		
+		for (int i = 0; i < b.length; i++){
+			sumSquared+=Math.pow((b[i]-meanArr), 2);
+		}
+		return Math.sqrt(sumSquared/(b.length+1));
 	}
 	
 	public double standardDev(T[] arr){
-		return 0;
+		double meanArr = mean(arr);
+		double sumSquared = 0;
+		for(int i = 0; i < arr.length; i++){
+			sumSquared += Math.pow(arr[i].doubleValue() - meanArr,2);
+		}
+		return Math.sqrt(sumSquared/arr.length);
 	}
 	
 	public double standardDev(T a, T ...b){
-		return 0;
+		
+		double meanArr = mean(a, b);
+		double sumSquared = Math.pow((a.doubleValue()-meanArr), 2);
+		
+		for(int i = 0; i < b.length; i++){
+			sumSquared+=Math.pow((b[i].doubleValue()-meanArr), 2);
+		}
+		
+		return Math.sqrt(sumSquared/(b.length+1));
 	}
 }
