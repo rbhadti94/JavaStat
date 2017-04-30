@@ -3,7 +3,7 @@
 * What is RavMath?
 * Why did I make it?
 * What can you do?
-* [Issues & Contact](# Issues & Contacts)
+* [Issues & Contact](#Issues & Contacts)
 
 ## Requirements
 * Java JDK 1.8 +
