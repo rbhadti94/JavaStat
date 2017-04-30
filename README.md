@@ -3,9 +3,9 @@
 * [Requirements](#requirements)
 * [What is RavMath?](#What-Is-RavMath?)
 * [Library Functionalities](#library-functionalities)
-  * Basic Statistics
-  * Probability Distribution Calculation & Modelling
-  * Parametric Data Modelling
+  * [Basic Statistics](###basic-statistics)
+  * [Probability Distribution Modelling](###probability-distribution-modelling)
+  * [Parametric Data Modelling](###parametric-data-modelling)
 * [Issues & Contact](#issues-&-contact)
 
 ## Requirements
@@ -32,13 +32,21 @@ Navigate to [Oracle Site](http://www.oracle.com/technetwork/java/javase/download
 
 
 ## What is RavMath?
-
+RavMath is a multifunctional statistics library...
 
 ## Library Functionalities
+
+### Basic statistics
+
+### Probability Distribution Modelling
+
+### Parametric Data Modelling
+
+
 
 ## Issues & Contact
 I welcome any suggestions to how this library can be improved. Please let me know if:
 * There's a mistake you find.
-* A functionality you want added to the library.
+* A functionality is missing from the library.
 
 Simply raise an issue in the **Issues** tab of the project and I will take a look as soon as I can.  
