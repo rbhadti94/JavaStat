@@ -26,9 +26,9 @@ export PATH=$PATH:/usr/lib/jvm/java-8-openjdk/bin
 
 The second option is to download the appropriate ```.deb``` package directly from the [Oracle Site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-**Windows**
+**Mac & Windows**
 
-Navigate to [Oracle Site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and download the appropriate package for Windows x86 or Windows x86_64.
+Navigate to [Oracle Site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and download the appropriate package.
 
 
 ## What is RavMath?
