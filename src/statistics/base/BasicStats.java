@@ -302,8 +302,12 @@ public strictfp class BasicStats  {
 		return 0;
 	}
 	
+	/**
+	 * 
+	 * @param modalMap
+	 * @return
+	 */
 	public final static Number modeCalc(Map modalMap){
-		
 		return null;
 	}
 	
