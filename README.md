@@ -37,7 +37,7 @@ RavMath is a multifunctional statistics library that allows users to carry out b
 This ranges from simple operations such as the mean & standard deviations to data-modelling operations such as linear regression.
 
 ## Using RavMath
-Download the
+Head over the [Releases](https://github.com/rbhadti94/RavMath/releases) section of the repository and download the latest stable release of this software.
 
 ## Library Functionalities
 
