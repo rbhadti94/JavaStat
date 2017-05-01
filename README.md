@@ -34,17 +34,43 @@ Navigate to [Oracle Site](http://www.oracle.com/technetwork/java/javase/download
 ## What is RavMath?
 RavMath is a multifunctional statistics library that allows users to carry out basic and advanced statistic calculations on 1D and 2D datasets.
 
-This ranges from simple operations such as the mean & standard deviations to data-modelling operations such as linear regression. 
+This ranges from simple operations such as the mean & standard deviations to data-modelling operations such as linear regression.
 
 ## Using RavMath
-
+Download the
 
 ## Library Functionalities
 
 
-### Basic statistics
+### Basic Statistics
+
 
 ### Probability Distribution Modelling
+Probability distributions can be imported using:
+```
+import RavMath.statistics.Distributions
+```
+This contains
+
+**Bionomial**                                                          
+The bionomial distribution is modelled by the methods:
+```
+#Returns a single probability value.
+public static final double probBionomial(int r, int N, double p)
+
+#Returns a distribution.
+public static final double[] distBionomial(int N, double p)
+```
+**Exponential**                                             
+The exponential distribution is modelled by the methods:
+```
+#Returns a single probability value.
+public static final double probExponential(double lambda, double x)
+
+#Returns a distribution in the range x in [0, N]
+public static final double[] distExponential(double lambda, int xMax)
+```
+f
 
 ### Parametric Data Modelling
 

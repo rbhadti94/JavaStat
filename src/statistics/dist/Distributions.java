@@ -51,6 +51,21 @@ public strictfp class Distributions {
 		return bionomialDist;
 	}
 	
+	
+	public static final double probExponential(double lambda, double x){
+		return lambda*Math.pow(Math.E, -lambda*x);
+	}
+	
+	public static final double[] distExponential(double lambda, int xMax){
+		assert(xMax <= Integer.MAX_VALUE);
+		double exponentialDist[] = new double[xMax];
+		for(int x = 0; x < xMax; x++){
+			exponentialDist[x] = probExponential(lambda, x);
+		}
+		return exponentialDist;
+	}
+	
+	
 	/*---------- SIDE METHODS -----------*/
 	
 	
@@ -72,7 +87,7 @@ public strictfp class Distributions {
 	 * integer. E.g. 3! = 3*2*1. 
 	 * 
 	 * @param  n - An integer.
-	 * @return n!
+	 * @return n! - The factorial result.
 	 */
 	public static final int factorial(int n){
 		if(n==1 || n==0){
