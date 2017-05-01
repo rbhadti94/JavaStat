@@ -53,7 +53,10 @@ import RavMath.statistics.Distributions
 This contains
 
 **Bionomial**                                                          
-The bionomial distribution is modelled by the methods:
+The bionomial distribution is modelled by the mathematical equation.
+
+![Images2](images/binomialeq.png)
+
 ```
 //Returns a single probability value.
 public static final double probBionomial(int r, int N, double p)
@@ -64,18 +67,16 @@ public static final double[] distBionomial(int N, double p)
 **Exponential**                                             
 The exponential distribution is modelled by the mathematical equation.
 
-![Images](images/expeq.png)
-
+![Images2](images/expeq.png)
 ```
 //Returns P(X=x;lambda)
 public static final double probExponential(double lambda, double x)
-```
 
-
-```
 //Returns P(X=x;lambda) for all x in [0,N]
 public static final double[] distExponential(double lambda, int xMax)
 ```
+
+
 
 
 ### Parametric Data Modelling
