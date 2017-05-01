@@ -10,7 +10,7 @@ package statistics.base;
 import java.util.HashMap;
 
 
-public strictfp class BasicStats <T extends Number> {
+public strictfp class BasicStats  {
 	
 	//---STAT BASIC METHOD---//
 	//mean.
@@ -19,7 +19,7 @@ public strictfp class BasicStats <T extends Number> {
 	//variance
 	//standard deviation
 	//interquartile range.
-
+	
 	/**
 	 * This class is non-instansiable.
 	 */
@@ -27,11 +27,35 @@ public strictfp class BasicStats <T extends Number> {
 		//No body.
 	}
 	
-	public final double mean(int a, int ...b){ 
+	public final static double mean(int a, int ...b){ 
 		return ((mean(b)*b.length)+a)/(b.length+1);
 	}
 	
-	public final double mean(int[] arr){
+	public final static double mean(int[] arr){
+		double arrSum = 0;
+		for(int i = 0; i < arr.length; i++){
+			arrSum+=arr[i];
+		}
+		return (arrSum/arr.length);
+	}
+	
+	public final static double mean(long a, long ...b){
+		return ((mean(b)*b.length)+a)/(b.length+1);
+	}
+	
+	public final static double mean(long[] arr){
+		double arrSum = 0;
+		for(int i = 0; i < arr.length; i++){
+			arrSum+=arr[i];
+		}
+		return (arrSum/arr.length);
+	}
+	
+	public final static double mean(float a, float ...b){
+		return ((mean(b)*b.length)+a)/(b.length+1);
+	}
+	
+	public final static double mean(float[] arr){
 		
 		double arrSum = 0;
 		
@@ -40,43 +64,13 @@ public strictfp class BasicStats <T extends Number> {
 		}
 		
 		return (arrSum/arr.length);
-		
 	}
 	
-	public final double mean(long a, long ...b){
+	public final static double mean(double a, double ...b){
 		return ((mean(b)*b.length)+a)/(b.length+1);
 	}
 	
-	public final double mean(long[] arr){
-		double arrSum = 0;
-		
-		for(int i = 0; i < arr.length; i++){
-			arrSum+=arr[i];
-		}
-		
-		return (arrSum/arr.length);
-	}
-	
-	public final double mean(float a, float ...b){
-		return ((mean(b)*b.length)+a)/(b.length+1);
-	}
-	
-	public final double mean(float[] arr){
-		
-		double arrSum = 0;
-		
-		for(int i = 0; i < arr.length; i++){
-			arrSum+=arr[i];
-		}
-		
-		return (arrSum/arr.length);
-	}
-	
-	public final double mean(double a, double ...b){
-		return ((mean(b)*b.length)+a)/(b.length+1);
-	}
-	
-	public final double mean(double[] arr){
+	public final static double mean(double[] arr){
 		
 		double arrSum = 0;
 		
@@ -88,11 +82,11 @@ public strictfp class BasicStats <T extends Number> {
 	}
 	
 	@SafeVarargs
-	public final double mean(T a, T ...b){
+	public final static <T extends Number> double mean(T a, T ...b){
 		return ((mean(b)*b.length)+a.doubleValue())/(b.length+1);
 	}
 	
-	public final double mean( T[] arr){
+	public final static <T extends Number> double mean( T[] arr){
 		Double arrSum = 0.0;
 		
 		for(int i = 0; i < arr.length; i++){
@@ -103,11 +97,11 @@ public strictfp class BasicStats <T extends Number> {
 		
 	}
 	
-	public final T mean( HashMap<T,T> hmap){
+	public final static <T extends Number> T mean( HashMap<T,T> hmap){
 		return null;
 	}
 	
-	public final double standardDev(int[] arr){
+	public final static double standardDev(int[] arr){
 		double sumSquared = 0;
 		double meanArr = mean(arr);
 		
@@ -118,7 +112,7 @@ public strictfp class BasicStats <T extends Number> {
 		return Math.sqrt(sumSquared/arr.length);
 	}
 	
-	public final double standardDev(long[] arr){
+	public final static double standardDev(long[] arr){
 		double sumSquared = 0;
 		double meanArr = mean(arr);
 		
@@ -129,7 +123,7 @@ public strictfp class BasicStats <T extends Number> {
 		return Math.sqrt(sumSquared/arr.length);
 	}
 	
-	public final double standardDev(float []arr){
+	public final static double standardDev(float []arr){
 		double sumSquared = 0;
 		double meanArr = mean(arr);
 		
@@ -140,7 +134,7 @@ public strictfp class BasicStats <T extends Number> {
 		return Math.sqrt(sumSquared/arr.length);
 	}
 	
-	public final double standardDev(double []arr){
+	public final static double standardDev(double []arr){
 		double sumSquared = 0;
 		double meanArr = mean(arr);
 		
@@ -151,7 +145,7 @@ public strictfp class BasicStats <T extends Number> {
 		return Math.sqrt(sumSquared/arr.length);
 	}
 	
-	public final double standardDev(int a, int ...b){
+	public final static double standardDev(int a, int ...b){
 		double meanArr = mean(a, b);
 		double sumSquared=Math.pow((a-meanArr), 2);
 		
@@ -161,7 +155,7 @@ public strictfp class BasicStats <T extends Number> {
 		return Math.sqrt(sumSquared/(b.length+1));
 	}
 	
-	public final double standardDev(long a, long ...b){
+	public final static double standardDev(long a, long ...b){
 		double meanArr = mean(a, b);
 		double sumSquared=Math.pow((a-meanArr), 2);
 		
@@ -171,7 +165,7 @@ public strictfp class BasicStats <T extends Number> {
 		return Math.sqrt(sumSquared/(b.length+1));
 	}
 	
-	public final double standardDev(float a, float ...b){
+	public final static double standardDev(float a, float ...b){
 		double meanArr = mean(a, b);
 		double sumSquared=Math.pow((a-meanArr), 2);
 		
@@ -181,7 +175,7 @@ public strictfp class BasicStats <T extends Number> {
 		return Math.sqrt(sumSquared/(b.length+1));
 	}
 	
-	public final double standardDev(double a, double ...b){
+	public final static double standardDev(double a, double ...b){
 		double meanArr = mean(a, b);
 		double sumSquared=Math.pow((a-meanArr), 2);
 		
@@ -191,7 +185,7 @@ public strictfp class BasicStats <T extends Number> {
 		return Math.sqrt(sumSquared/(b.length+1));
 	}
 	
-	public final double standardDev(T[] arr){
+	public final static <T extends Number> double standardDev(T[] arr){
 		
 		double meanArr = mean(arr);
 		double sumSquared = 0;
@@ -202,7 +196,7 @@ public strictfp class BasicStats <T extends Number> {
 	}
 	
 	@SafeVarargs
-	public final double standardDev(T a, T ...b){
+	public final static <T extends Number> double standardDev(T a, T ...b){
 		
 		double meanArr = mean(a, b);
 		double sumSquared = Math.pow((a.doubleValue()-meanArr), 2);
