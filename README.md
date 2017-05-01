@@ -70,7 +70,7 @@ public static final double probExponential(double lambda, double x)
 #Returns a distribution in the range x in [0, N]
 public static final double[] distExponential(double lambda, int xMax)
 ```
-f
+
 
 ### Parametric Data Modelling
 
