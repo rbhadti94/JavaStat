@@ -47,7 +47,7 @@ Download the
 
 ### Probability Distribution Modelling
 Probability distributions can be imported using:
-```
+```java
 import RavMath.statistics.Distributions
 ```
 This contains
@@ -57,7 +57,7 @@ The bionomial distribution is modelled by the mathematical equation.
 
 ![Images2](images/binomialeq.bmp)
 
-```
+```java
 //Returns a single probability value.
 public static final double probBionomial(int r, int N, double p)
 
@@ -67,9 +67,9 @@ public static final double[] distBionomial(int N, double p)
 **Exponential**                                             
 The exponential distribution is modelled by the mathematical equation.
 
-      ![Images2](images/expeq.png)
+![Images2](images/expeq.png)
 
-```
+```java
 //Returns P(X=x;lambda)
 public static final double probExponential(double lambda, double x)
 
