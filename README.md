@@ -55,7 +55,7 @@ This contains
 **Bionomial**                                                          
 The bionomial distribution is modelled by the mathematical equation.
 
-![Images2](images/binomialeq.png)
+![Images2](images/binomialeq.bmp)
 
 ```
 //Returns a single probability value.
