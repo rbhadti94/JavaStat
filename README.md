@@ -62,15 +62,14 @@ public static final double probBionomial(int r, int N, double p)
 public static final double[] distBionomial(int N, double p)
 ```
 **Exponential**                                             
-The exponential distribution is modelled:
+The exponential distribution is modelled by the mathematical equation.
 
-![Images](images/expEq.ps)
+![Images](images/expeq.png)
 
 ```
 //Returns P(X=x;lambda)
 public static final double probExponential(double lambda, double x)
 ```
-
 
 
 ```
