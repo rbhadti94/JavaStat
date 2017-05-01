@@ -55,19 +55,22 @@ This contains
 **Bionomial**                                                          
 The bionomial distribution is modelled by the methods:
 ```
-#Returns a single probability value.
+//Returns a single probability value.
 public static final double probBionomial(int r, int N, double p)
 
-#Returns a distribution.
+//Returns a distribution.
 public static final double[] distBionomial(int N, double p)
 ```
 **Exponential**                                             
 The exponential distribution is modelled by the methods:
 ```
-#Returns a single probability value.
+//Returns P(X=x;lambda)
 public static final double probExponential(double lambda, double x)
+```
 
-#Returns a distribution in the range x in [0, N]
+
+```
+//Returns P(X=x;lambda) for all x in [0,N]
 public static final double[] distExponential(double lambda, int xMax)
 ```
 
