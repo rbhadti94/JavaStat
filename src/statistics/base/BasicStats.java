@@ -314,7 +314,6 @@ public strictfp class BasicStats  {
 	/* -------- MODE -------- */
 	public final static double mode(int[] arr){
 		//Loop through array and store values in map.
-		
 		Map<Integer, Integer> modalMap = new HashMap<Integer, Integer>();
 	
 		for(int i = 0; i < arr.length; i++){
