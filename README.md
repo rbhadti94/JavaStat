@@ -62,11 +62,15 @@ public static final double probBionomial(int r, int N, double p)
 public static final double[] distBionomial(int N, double p)
 ```
 **Exponential**                                             
-The exponential distribution is modelled by the methods:
+The exponential distribution is modelled:
+
+![Images](images/expEq.ps)
+
 ```
 //Returns P(X=x;lambda)
 public static final double probExponential(double lambda, double x)
 ```
+
 
 
 ```
