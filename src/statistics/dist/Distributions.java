@@ -20,19 +20,29 @@ public strictfp class Distributions {
 		//No-body
 	}
 	
-	//----Distribution List----//
-	//Binomial
-	//Poisson
-	//Exponential
-	
-	
-	//Bionomial probability.
-	//P(X=r) in an N sized prob dist with probability p.
+	/**
+	 * This method calculates P(X=r) for a bionomial
+	 * distribution of size N > 0.
+	 * 
+	 * @param r - The parameter to test for.
+	 * @param N - The sample size.
+	 * @param p - The probability p of an event.
+	 * @return double The P(X=r)
+	 */
 	public static final double probBionomial(int r, int N, double p){
 		return nCr(r, N)*Math.pow(p, r)*Math.pow(1-p, N-r);
 	}
 	
-	//Return distribution set for given N and probability p.
+	/**
+	 * This method returns the values P(X=r) for
+	 * r in [0,N-1]. It returns the distribution as 
+	 * an array. 
+	 * 
+	 * @param N - The distribution size.
+	 * @param p - The probability p of an event.
+	 * @return double[] - The bionomial distribution
+	 * 
+	 */
 	public static final double[] distBionomial(int N, double p){
 		double bionomialDist[] = new double[N];
 		for(int r = 0; r < N; r++){
@@ -43,12 +53,29 @@ public strictfp class Distributions {
 	
 	/*---------- SIDE METHODS -----------*/
 	
-	public static final int nCr(int r, int N){
-		return factorial(N)/(factorial(r)*factorial(N-r));
+	
+	/**
+	 * This method calculates nCr for integers 
+	 * n and r. i.e. How many ways can we choose 
+	 * 'r' from 'n'. E.g. 5C2 = 10.
+	 * 
+	 * @param r - 
+	 * @param n - 
+	 * @return int - The number of ways to choose 'r' from 'n'.
+	 */
+	public static final int nCr(int r, int n){
+		return factorial(n)/(factorial(r)*factorial(n-r));
 	}
 	
+	/**
+	 * This method calculates the factorial of an
+	 * integer. E.g. 3! = 3*2*1. 
+	 * 
+	 * @param  n - An integer.
+	 * @return n!
+	 */
 	public static final int factorial(int n){
-		if(n==1){
+		if(n==1 || n==0){
 			return 1;
 		}
 		return n*factorial(n-1);
