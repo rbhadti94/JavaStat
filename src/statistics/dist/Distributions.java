@@ -53,10 +53,28 @@ public strictfp class Distributions {
 		return bionomialDist;
 	}
 	
+	
+	/**
+	 * This method returns P(X=x;lambda) using the exponential
+	 * distribution with parameter lambda.
+	 * 
+	 * @param lambda - Decay constant.
+	 * @param x - Value to test for.
+	 * @return double - The P(X=x;lambda)
+	 */
 	public static final double probExponential(double lambda, double x){
 		return lambda*Math.pow(Math.E, -lambda*x);
 	}
 	
+	/**
+	 * This method returns the values P(X=x;lambda) for
+	 * x in range [0,xMax-1]. It returns the distribution as 
+	 * an array. 
+	 * 
+	 * @param lambda - Decay constant.
+	 * @param xMax - The maximum x value to go up to.
+	 * @return double[] - The return distribution.
+	 */
 	public static final double[] distExponential(double lambda, int xMax){
 		assert(xMax <= Integer.MAX_VALUE);
 		double exponentialDist[] = new double[xMax];
