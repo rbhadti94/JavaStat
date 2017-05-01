@@ -1,1 +1,5 @@
-theme: jekyll-theme-minimal
+title: RavMath - A Statistics Library
+description: RavMath is a multifunctional statistics library for Java
+theme: cayman
+show_downloads: true
+google_analytics:

@@ -22,7 +22,7 @@ public strictfp class Distributions {
 	
 	/**
 	 * This method calculates P(X=r) for a bionomial
-	 * distribution of size N > 0.
+	 * distribution of size N > 0 with probability parameter 'p'.
 	 * 
 	 * @param r - The parameter to test for.
 	 * @param N - The sample size.
@@ -30,6 +30,7 @@ public strictfp class Distributions {
 	 * @return double The P(X=r)
 	 */
 	public static final double probBionomial(int r, int N, double p){
+		assert(p<=MAX_P && p>=MIN_P);
 		return nCr(r, N)*Math.pow(p, r)*Math.pow(1-p, N-r);
 	}
 	
@@ -44,13 +45,13 @@ public strictfp class Distributions {
 	 * 
 	 */
 	public static final double[] distBionomial(int N, double p){
+		assert(p<=MAX_P && p>=MIN_P);
 		double bionomialDist[] = new double[N];
 		for(int r = 0; r < N; r++){
 			bionomialDist[r] = probBionomial(r, N, p);
 		}
 		return bionomialDist;
 	}
-	
 	
 	public static final double probExponential(double lambda, double x){
 		return lambda*Math.pow(Math.E, -lambda*x);
@@ -65,7 +66,6 @@ public strictfp class Distributions {
 		return exponentialDist;
 	}
 	
-	
 	/*---------- SIDE METHODS -----------*/
 	
 	
@@ -74,8 +74,8 @@ public strictfp class Distributions {
 	 * n and r. i.e. How many ways can we choose 
 	 * 'r' from 'n'. E.g. 5C2 = 10.
 	 * 
-	 * @param r - 
-	 * @param n - 
+	 * @param r - The number of things you want to choose.
+	 * @param n - The total number.
 	 * @return int - The number of ways to choose 'r' from 'n'.
 	 */
 	public static final int nCr(int r, int n){
@@ -83,8 +83,8 @@ public strictfp class Distributions {
 	}
 	
 	/**
-	 * This method calculates the factorial of an
-	 * integer. E.g. 3! = 3*2*1. 
+	 * This recursive method calculates the factorial 
+	 * of an integer. E.g. 3! = 3*2*1. 
 	 * 
 	 * @param  n - An integer.
 	 * @return n! - The factorial result.
