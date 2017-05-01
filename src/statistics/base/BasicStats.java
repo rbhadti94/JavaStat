@@ -302,20 +302,40 @@ public strictfp class BasicStats  {
 		return 0;
 	}
 	
-	/**
-	 * 
-	 * @param modalMap
-	 * @return
-	 */
-	public final static Number modeCalc(Map modalMap){
-		return null;
-	}
 	
 	/* -------- MODE -------- */
-	public final static double mode(int[] arr){
-		//Loop through array and store values in map.
-		Map<Integer, Integer> modalMap = new HashMap<Integer, Integer>();
+	public final static int mode(int[] arr){
+		double[] tmpArr = new double[arr.length];
+		for(int i = 0; i < arr.length; i++){
+			tmpArr[i] = (double)arr[i];
+		}
+		return (int)mode(tmpArr);
+	}
 	
+	public final static long mode(long[] arr){
+		double[] tmpArr = new double[arr.length];
+		for(int i = 0; i < arr.length; i++){
+			tmpArr[i] = (double)arr[i];
+		}
+		return (long)mode(tmpArr);
+	}
+	
+	public final static float mode(float[] arr){
+		double[] tmpArr = new double[arr.length];
+		for(int i = 0; i < arr.length; i++){
+			tmpArr[i] = (double)arr[i];
+		}
+		return (float)mode(tmpArr);
+	}
+	
+	/**
+	 * All calcs done in double.
+	 * @param arr
+	 * @return
+	 */
+	public final static double mode(double[] arr){
+		//Loop through array and store values in map.
+		Map<Double, Integer> modalMap = new HashMap<Double, Integer>();
 		for(int i = 0; i < arr.length; i++){
 			//If it isn't contained in the map.
 			if(!modalMap.containsKey(arr[i])){
@@ -326,10 +346,9 @@ public strictfp class BasicStats  {
 				modalMap.replace(arr[i], modalMap.get(arr[i])+1);
 			}
 		}
-		
 		//Get the count values and convert to array.
 		Collection<Integer> x = modalMap.values();
-		List<Integer> keys = new ArrayList<Integer>(modalMap.keySet());
+		List<Double> keys = new ArrayList<Double>(modalMap.keySet());
 		Object[] y = x.toArray();
 		int currMaxIndex = 0;
 		
@@ -350,33 +369,6 @@ public strictfp class BasicStats  {
 		return keys.get(currMaxIndex);
 	}
 	
-	public final static double mode(int a, int ...b){
-		return 0;
-	}
-	
-	public final static double mode(long[] arr){
-		return 0;
-	}
-	
-	public final static double mode(long a, long ...b){
-		return 0;
-	}
-	
-	public final static double mode(float[] arr){
-		return 0;
-	}
-	
-	public final static double mode(float a, float ...b){
-		return 0;
-	}
-	
-	public final static double mode(double[] arr){
-		return 0;
-	}
-	
-	public final static double mode(double a, double ...b){
-		return 0;
-	}
-	
+		
 }
 
