@@ -84,6 +84,23 @@ public strictfp class Distributions {
 		return exponentialDist;
 	}
 	
+	/**
+	 * This method generates a normal distribution with 'numElem' elements
+	 * either side of the mean 'mu'.
+	 * 
+	 * @param mu - The Mean.
+	 * @param sigma - The Standard Deviation.
+	 * @return double[] - The normal distribution N(mu, sigma^2);
+	 * 
+	 */
+	public static final double[] distNormal(double mu, double sigma, int numElem){
+		double normalDist[] = new double[2*numElem+1];
+		//Generate normal dist.
+		return normalDist;
+		
+	}
+	
+	
 	/*---------- SIDE METHODS -----------*/
 	
 	
