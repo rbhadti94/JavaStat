@@ -29,7 +29,7 @@ public strictfp class Distributions {
 	 * @param p - The probability p of an event.
 	 * @return double The P(X=r)
 	 */
-	public static final double probBionomial(int r, int N, double p){
+	public static final double probBinomial(int r, int N, double p){
 		assert(p<=MAX_P && p>=MIN_P);
 		return nCr(r, N)*Math.pow(p, r)*Math.pow(1-p, N-r);
 	}
@@ -44,11 +44,11 @@ public strictfp class Distributions {
 	 * @return double[] - The bionomial distribution
 	 * 
 	 */
-	public static final double[] distBionomial(int N, double p){
+	public static final double[] distBinomial(int N, double p){
 		assert(p<=MAX_P && p>=MIN_P);
 		double bionomialDist[] = new double[N];
 		for(int r = 0; r < N; r++){
-			bionomialDist[r] = probBionomial(r, N, p);
+			bionomialDist[r] = probBinomial(r, N, p);
 		}
 		return bionomialDist;
 	}
@@ -84,6 +84,10 @@ public strictfp class Distributions {
 		return exponentialDist;
 	}
 	
+	public static final double probPoisson(double lambda, int k){
+		return Math.pow(lambda, k)*Math.pow(Math.E, -lambda)/factorial(k);
+	}
+	
 	/**
 	 * This method generates a normal distribution with 'numElem' elements
 	 * either side of the mean 'mu'.
@@ -94,15 +98,61 @@ public strictfp class Distributions {
 	 * 
 	 */
 	public static final double[] distNormal(double mu, double sigma, int numElem){
+		
 		double normalDist[] = new double[2*numElem+1];
-		//Generate normal dist.
+		double variance = sigma*sigma;
+		double coeff = 1/(Math.sqrt(2*variance*Math.PI));
+		double expRes = 0;
+		
+		for(int i = -numElem; i < numElem ; i++){
+			expRes = Math.pow(Math.E, -((i-mu)*(i-mu))/(2*variance));
+			normalDist[i] = coeff*expRes;
+		}
+		
 		return normalDist;
 		
 	}
 	
+	/**
+	 * 
+	 * @param mu
+	 * @param sigma
+	 * @param z
+	 * @return P(X<z) for N(mu, sigma^2).
+	 */
+	public static final double tailNormal(double mu, double sigma, double z){
+		
+		double erfCoeff = (z-mu)/(Math.sqrt(2)*sigma);
+		
+		return 0.5*(1+erf(erfCoeff));
+	}
 	
+		
 	/*---------- SIDE METHODS -----------*/
 	
+	/**
+	 * Error Function 
+	 * Returns erf(z).
+	 */
+	public static final double erf(double z){
+		
+		double t = 1/(1+0.5*Math.abs(z));
+		
+		double erfRes = 1-t*Math.exp( -z*z -  1.26551223 +
+	            t * ( 1.00002368 +
+	            t * ( 0.37409196 +
+	            t * ( 0.09678418 +
+	            t * (-0.18628806 +
+	            t * ( 0.27886807 +
+	            t * (-1.13520398 +
+	            t * ( 1.48851587 +
+	            t * (-0.82215223 +
+	            t * ( 0.17087277)))))))))
+	        );
+		
+		return z >= 0 ? erfRes : -erfRes ;
+	}
+
 	
 	/**
 	 * This method calculates nCr for integers 
