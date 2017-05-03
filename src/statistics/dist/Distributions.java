@@ -9,8 +9,14 @@ package statistics.dist;
 
 public strictfp class Distributions {
 	
+	/*
+	 * The maximum value for a probability.
+	 */
 	private static final double MAX_P = 1.0;
 	
+	/*
+	 * The minimum value for a probability.
+	 */
 	private static final double MIN_P = 0.0;
 	
 	/**
@@ -98,6 +104,8 @@ public strictfp class Distributions {
 	}
 	
 	/**
+	 * Calculates probability using the Poisson distribution.
+	 * P(X=k;lambda). 
 	 * 
 	 * @param lambda
 	 * @param k
@@ -134,7 +142,6 @@ public strictfp class Distributions {
 	 * @param sigma - The Standard Deviation.
 	 * @param step - Step for the array.
 	 * @return double[] - The normal distribution N(mu, sigma^2);
-	 * 
 	 */
 	public static final double[] distNormal(double mu, double sigma, int numElem, double step){
 		
@@ -156,7 +163,6 @@ public strictfp class Distributions {
 	}
 	
 	/**
-	 * 
 	 * @param mu
 	 * @param sigma
 	 * @param z
