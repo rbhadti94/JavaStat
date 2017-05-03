@@ -14,9 +14,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import day0.BasicStatistics;
-
-
 public strictfp class BasicStats  {
 	
 	//---STAT BASIC METHOD---//
