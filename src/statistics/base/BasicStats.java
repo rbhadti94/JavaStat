@@ -16,13 +16,6 @@ import java.util.Map;
 
 public strictfp class BasicStats  {
 	
-	//---STAT BASIC METHOD---//
-	//mean. --- Done
-	//median.
-	//mode. ---
-	//standard deviation --- Done
-	//interquartile range.
-	
 	/**
 	 * This class is non-instansiable.
 	 */
@@ -140,11 +133,25 @@ public strictfp class BasicStats  {
 		return arr.length!=0 ? (arrSum/arr.length) : 0;
 	}
 	
+	/**
+	 * This method returns the mean of multiple numbers of
+	 * type T. Where T is the wrapper Number object type.
+	 * 
+	 * @param arr - The input array.
+	 * @return - Returns the mean as type T.
+	 */
 	@SafeVarargs
 	public final static <T extends Number> double mean(T a, T ...b){
 		return ((mean(b)*b.length)+a.doubleValue())/(b.length+1);
 	}
 	
+	/**
+	 * This method returns the mean of an array of type T.
+ 	 * Where T is the wrapper Number object type.
+	 * 
+	 * @param hmap
+	 * @return
+	 */
 	public final static <T extends Number> double mean( T[] arr){
 		Double arrSum = 0.0;
 		for(int i = 0; i < arr.length; i++){
@@ -153,6 +160,19 @@ public strictfp class BasicStats  {
 		return arr.length!=0 ? (arrSum/arr.length) : 0;
 	}
 	
+	/**
+	 * This method returns the mean value obtained
+	 * from a frequency table.
+	 * 
+	 * |Value(s)|Frequency|
+	 * |	x1	|	y1	  |
+	 * |	x2	|	y2	  |
+	 * |    x3	|   y3    |
+	 * |________|_________|
+	 * 
+	 * @param hmap - A map of the table in wrapper type form.
+	 * @return T - The mean value as wrapper type.
+	 */
 	public final static <T extends Number> T mean( HashMap<T,T> hmap){
 		return null;
 	}
@@ -354,8 +374,13 @@ public strictfp class BasicStats  {
 		return median(tmpArray);
 	}
 	
-	
 	/* -------- MODE -------- */
+	
+	/**
+	 * 
+	 * @param arr 
+	 * @return
+	 */
 	public final static int mode(int[] arr){
 		double[] tmpArr = new double[arr.length];
 		for(int i = 0; i < arr.length; i++){
@@ -364,6 +389,11 @@ public strictfp class BasicStats  {
 		return (int)mode(tmpArr);
 	}
 	
+	/**
+	 * 
+	 * @param arr
+	 * @return
+	 */
 	public final static long mode(long[] arr){
 		double[] tmpArr = new double[arr.length];
 		for(int i = 0; i < arr.length; i++){
@@ -372,6 +402,11 @@ public strictfp class BasicStats  {
 		return (long)mode(tmpArr);
 	}
 	
+	/**
+	 * 
+	 * @param arr
+	 * @return
+	 */
 	public final static float mode(float[] arr){
 		double[] tmpArr = new double[arr.length];
 		for(int i = 0; i < arr.length; i++){
