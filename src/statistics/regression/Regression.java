@@ -114,6 +114,12 @@ public strictfp class Regression {
 	
 	/* ----------- SPEARMAN RANK'S CORRELATION COEFFICIENT ---------*/
 	
+	/**
+	 * 
+	 * @param X -
+	 * @param Y -
+	 * @return double - 
+	 */
 	public final static double spearmanRank(double X[], double Y[]){
 		
 		assert X.length == Y.length : "The input array X & Y should be equal in length";
@@ -159,5 +165,151 @@ public strictfp class Regression {
 		
 		return (1 - (6*sumDiPow2)/(n*(n*n - 1)) );
 	}
-
+	
+	/**
+	 * 
+	 * @param X - 
+	 * @param Y -
+	 * @return double - 
+	 */
+	public final static double spearmanRank(int X[], int Y[]){
+		
+		assert X.length == Y.length : "The input array X & Y should be equal in length";
+		
+		int n = X.length;
+		
+		double XTemp[] = new double[X.length];
+		double YTemp[] = new double[Y.length];
+		
+		for(int i = 0; i < n; i++){
+			XTemp[i] = X[i];
+			YTemp[i] = Y[i];
+		}
+		return spearmanRank(XTemp, YTemp);
+	}
+	
+	/**
+	 * 
+	 * @param X
+	 * @param Y
+	 * @return
+	 */
+	public final static double spearmanRank(long X[], long Y[]){
+		
+		assert X.length == Y.length : "The input array X & Y should be equal in length";
+		
+		int n = X.length;
+		
+		double XTemp[] = new double[X.length];
+		double YTemp[] = new double[Y.length];
+		
+		for(int i = 0; i < n; i++){
+			XTemp[i] = X[i];
+			YTemp[i] = Y[i];
+		}
+		return spearmanRank(XTemp, YTemp);
+	}
+	
+	/**
+	 * 
+	 * @param X
+	 * @param Y
+	 * @return
+	 */
+	public final static double spearmanRank(float X[], float Y[]){
+		
+		assert X.length == Y.length : "The input array X & Y should be equal in length";
+		
+		int n = X.length;
+		
+		double XTemp[] = new double[X.length];
+		double YTemp[] = new double[Y.length];
+		
+		for(int i = 0; i < n; i++){
+			XTemp[i] = X[i];
+			YTemp[i] = Y[i];
+		}
+		return spearmanRank(XTemp, YTemp);
+	}
+	
+	/* -------------- LEAST SQUARE REGRESSION LINE -------------- */
+	
+	/**
+	 * 
+	 * @param X - An array of X-coordinates .
+	 * @param Y - An array of Y-coordinates.
+	 * @return double[] - The gradient and constant parameter. 
+	 */
+	public final static double[] leastSquareRegression(double X[], double Y[]){
+		
+		double prms[] = new double[2];
+		
+		//Using simple method.
+		double pearsonCoefficient = pearsonCoefficient(X, Y);
+		
+		//The gradient value.
+		prms[0] = pearsonCoefficient*(BasicStats.standardDev(Y)/BasicStats.standardDev(X));
+		
+		//The offset value.
+		prms[1] = BasicStats.mean(Y) - prms[0]*BasicStats.mean(X);
+		
+		return prms;
+	}
+	
+	/**
+	 * 
+	 * @param X
+	 * @param Y
+	 * @return
+	 */
+	public final static double[] leastSquareRegression(int X[], int Y[]){
+		
+		double XTemp[] = new double[X.length];
+		double YTemp[] = new double[Y.length];
+		
+		for(int i = 0; i < X.length; i++){
+			XTemp[i] = X[i];
+			YTemp[i] = Y[i];
+		}
+		
+		return leastSquareRegression(XTemp, YTemp);
+	}
+	
+	/**
+	 * 
+	 * @param X
+	 * @param Y
+	 * @return
+	 */
+	public final static double[] leastSquareRegression(long X[], long Y[]){
+		
+		double XTemp[] = new double[X.length];
+		double YTemp[] = new double[Y.length];
+		
+		for(int i = 0; i < X.length; i++){
+			XTemp[i] = X[i];
+			YTemp[i] = Y[i];
+		}
+		
+		return leastSquareRegression(XTemp, YTemp);
+	}
+	
+	/**
+	 * 
+	 * @param X
+	 * @param Y
+	 * @return
+	 */
+	public final static double[] leastSquareRegression(float X[], float Y[]){
+		
+		double XTemp[] = new double[X.length];
+		double YTemp[] = new double[Y.length];
+		
+		for(int i = 0; i < X.length; i++){
+			XTemp[i] = X[i];
+			YTemp[i] = Y[i];
+		}
+		
+		return leastSquareRegression(XTemp, YTemp);
+	}
 }
