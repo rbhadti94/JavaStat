@@ -33,7 +33,7 @@ public strictfp class Distributions {
 	 * @param r - The parameter to test for.
 	 * @param N - The sample size.
 	 * @param p - The probability p of an event.
-	 * @return double The P(X=r)
+	 * @return double - The P(X=r)
 	 */
 	public static final double probBinomial(int r, int N, double p){
 		assert(p<=MAX_P && p>=MIN_P);

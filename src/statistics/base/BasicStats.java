@@ -376,10 +376,12 @@ public strictfp class BasicStats  {
 	
 	/* -------- MODE -------- */
 	
-	/**
+    /** 
+     * This method calculates the modal value of
+	 * an input array. (int)
 	 * 
-	 * @param arr 
-	 * @return
+	 * @param arr - The input array.
+	 * @return int - The modal value.
 	 */
 	public final static int mode(int[] arr){
 		double[] tmpArr = new double[arr.length];
@@ -390,9 +392,11 @@ public strictfp class BasicStats  {
 	}
 	
 	/**
+	 * This method calculates the modal value of
+	 * an input array. (long)
 	 * 
-	 * @param arr
-	 * @return
+	 * @param arr - The input array.
+	 * @return long - The modal value.
 	 */
 	public final static long mode(long[] arr){
 		double[] tmpArr = new double[arr.length];
@@ -403,9 +407,11 @@ public strictfp class BasicStats  {
 	}
 	
 	/**
+	 * This method calculates the modal value of
+	 * an input array. (float)
 	 * 
-	 * @param arr
-	 * @return
+	 * @param arr - The input array.
+	 * @return float - The modal value.
 	 */
 	public final static float mode(float[] arr){
 		double[] tmpArr = new double[arr.length];
@@ -416,9 +422,11 @@ public strictfp class BasicStats  {
 	}
 	
 	/**
-	 * All calcs done in double.
-	 * @param arr
-	 * @return
+	 * This method calculates the modal value of
+	 * an input array. (double)
+	 * 
+	 * @param arr - The input array.
+	 * @return double - The modal value.
 	 */
 	public final static double mode(double[] arr){
 		//Loop through array and store values in map.
