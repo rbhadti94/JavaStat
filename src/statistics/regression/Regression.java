@@ -14,6 +14,8 @@ public strictfp class Regression {
 		
 		assert X.length == Y.length : "The input array X & Y should be equal in length";
 		
+		int n = X.length;
+		
 		double meanX = BasicStats.mean(X);
 		double meanY = BasicStats.mean(Y);
 		
@@ -22,11 +24,11 @@ public strictfp class Regression {
 		
 		double covXY = 0;
 		
-		for(int i = 0; i < X.length; i++){
+		for(int i = 0; i < n; i++){
 			covXY += (X[i]-meanX)*(Y[i]-meanY);
 		}
 		
-		return covXY/(stdX*stdY);
+		return covXY/(n*stdX*stdY);
 	}
 	
 	/**
