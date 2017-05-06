@@ -47,8 +47,7 @@ public strictfp class Distributions {
 	 * 
 	 * @param N - The distribution size.
 	 * @param p - The probability p of an event.
-	 * @return double[] - The bionomial distribution
-	 * 
+	 * @return double[] - The bionomial distribution.
 	 */
 	public static final double[] distBinomial(int N, double p){
 		assert(p<=MAX_P && p>=MIN_P);
@@ -66,7 +65,7 @@ public strictfp class Distributions {
 	 * 
 	 * @param lambda - Decay constant.
 	 * @param x - Value to test for.
-	 * @return double - The P(X=x;lambda)
+	 * @return double - The P(X=x;lambda).
 	 */
 	public static final double probExponential(double lambda, double x){
 		return lambda*Math.pow(Math.E, -lambda*x);
