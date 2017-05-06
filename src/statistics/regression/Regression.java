@@ -1,5 +1,12 @@
 package statistics.regression;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 import statistics.base.BasicStats;
 
 public strictfp class Regression {
@@ -103,6 +110,54 @@ public strictfp class Regression {
 			yTemp[i] = Y[i].doubleValue();
 		}		
 		return pearsonCoefficient(xTemp, yTemp);
+	}
+	
+	/* ----------- SPEARMAN RANK'S CORRELATION COEFFICIENT ---------*/
+	
+	public final static double spearmanRank(double X[], double Y[]){
+		
+		assert X.length == Y.length : "The input array X & Y should be equal in length";
+		
+		int n = X.length;
+		
+		//Make copy of the two arrays.
+		double XTemp[] = Arrays.copyOf(X, X.length);
+		double YTemp[] = Arrays.copyOf(Y, Y.length);
+		
+		//Map contains X array values and its Rank.
+		Map <Double, Integer> xMap = new HashMap<Double, Integer>();
+	
+		//Map contains Y array values and its Rank.
+		Map <Double, Integer> yMap = new HashMap<Double, Integer>();
+	
+		//Sorted array added into a list.
+		Arrays.sort(XTemp);
+		Arrays.sort(YTemp);
+		ArrayList<Double> xList = new ArrayList<Double>();
+		ArrayList<Double> yList = new ArrayList<Double>();
+		
+		for(int i = 0; i < n; i++){
+			xList.add(Double.valueOf(XTemp[i]));
+			yList.add(Double.valueOf(YTemp[i]));
+		}
+		
+		XTemp = null;
+		YTemp = null;
+		
+		//Store rank of X & Y elements.
+		for(int i = 0; i < n; i++){
+			//Rank is the index of the sorted element + 1.
+			xMap.put(Double.valueOf(X[i]) , xList.indexOf(X[i])+1);
+			yMap.put(Double.valueOf(Y[i]) , yList.indexOf(Y[i])+1);
+		}
+		
+		//Calculate sum(d_i)^2.
+		double sumDiPow2 = 0;
+		for(int i = 0; i < n; i++){
+			sumDiPow2 += Math.pow( xMap.get(X[i])-yMap.get(Y[i]) , 2 );
+		}
+		
+		return (1 - (6*sumDiPow2)/(n*(n*n - 1)) );
 	}
 
 }
