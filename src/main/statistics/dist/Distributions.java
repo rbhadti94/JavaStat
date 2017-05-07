@@ -5,7 +5,7 @@
  * @author Ravindra Bhadti
  * @V0.2
  */
-package statistics.dist;
+package main.statistics.dist;
 
 public strictfp class Distributions {
 	

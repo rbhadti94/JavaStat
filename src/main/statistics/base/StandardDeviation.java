@@ -1,6 +1,6 @@
-package statistics.base;
+package main.statistics.base;
 
-import static statistics.base.Mean.*;
+import static main.statistics.base.Mean.*;
 
 public class StandardDeviation {
 

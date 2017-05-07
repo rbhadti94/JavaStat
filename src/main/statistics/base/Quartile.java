@@ -5,9 +5,9 @@
  * @V0.2
  */
 
-package statistics.base;
+package main.statistics.base;
 
-import static statistics.base.Median.*;
+import static main.statistics.base.Median.*;
 
 public strictfp class Quartile{
 	
