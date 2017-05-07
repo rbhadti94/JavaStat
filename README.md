@@ -52,6 +52,21 @@ import RavMath.statistics.Distributions
 ```
 This contains
 
+
+### Regression Analysis
+The regression analysis can be imported using:
+```
+import RavMath.statistics.Regression
+```
+
+
+**Pearson Correlation Coefficient**
+
+**Spearman Rank Coefficient**
+
+**Least Square Regression**
+
+
 **Bionomial**                                                          
 The bionomial distribution is modelled by the mathematical equation.
 
