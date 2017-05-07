@@ -3,7 +3,7 @@
  * Class: RavMath.base.Distributions
  * 
  * @author Ravindra Bhadti
- * @V1.0
+ * @V0.2
  */
 package statistics.dist;
 
