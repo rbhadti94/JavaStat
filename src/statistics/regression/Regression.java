@@ -12,7 +12,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import statistics.base.BasicStats;
+import static statistics.base.Mean.*;
+import static statistics.base.StandardDeviation.*;
 
 public strictfp class Regression {
 
@@ -28,11 +29,11 @@ public strictfp class Regression {
 		
 		int n = X.length;
 		
-		double meanX = BasicStats.mean(X);
-		double meanY = BasicStats.mean(Y);
+		double meanX = mean(X);
+		double meanY = mean(Y);
 		
-		double stdX  = BasicStats.standardDev(X);
-		double stdY  = BasicStats.standardDev(Y);
+		double stdX  = standardDev(X);
+		double stdY  = standardDev(Y);
 		
 		double covXY = 0;
 		
@@ -274,10 +275,10 @@ public strictfp class Regression {
 		double pearsonCoefficient = pearsonCoefficient(X, Y);
 		
 		//The gradient value.
-		prms[0] = pearsonCoefficient*(BasicStats.standardDev(Y)/BasicStats.standardDev(X));
+		prms[0] = pearsonCoefficient*(standardDev(Y)/standardDev(X));
 		
 		//The offset value.
-		prms[1] = BasicStats.mean(Y) - prms[0]*BasicStats.mean(X);
+		prms[1] = mean(Y) - prms[0]*mean(X);
 		
 		return prms;
 	}
