@@ -2,7 +2,7 @@
  * Class: RavMath.base.BasicStats 
  * 
  * @author Ravindra Bhadti
- * @V1.0
+ * @V0.3
  */
 
 package statistics.base;

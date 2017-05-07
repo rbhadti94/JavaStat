@@ -1,3 +1,11 @@
+/**
+ * 
+ * Class: RavMath.base.Distributions
+ * 
+ * @author Ravindra Bhadti
+ * @V0.3
+ */
+
 package statistics.regression;
 
 import java.util.ArrayList;
