@@ -232,6 +232,27 @@ public strictfp class Regression {
 		return spearmanRank(XTemp, YTemp);
 	}
 	
+	/**
+	 * 
+	 * @param X -
+	 * @param Y -
+	 * @return Double - 
+	 */
+	public final static <T extends Number> Double spearmanRank(T X[], T Y[]){
+		
+		double XTemp[] = new double[X.length];
+		double YTemp[] = new double[Y.length];
+		
+		for(int i = 0; i < X.length; i++){
+			XTemp[i] = X[i].doubleValue();
+			YTemp[i] = Y[i].doubleValue();
+		}
+		
+		return Double.valueOf(spearmanRank(XTemp, YTemp));
+		
+	}
+	
+	
 	/* -------------- LEAST SQUARE REGRESSION LINE -------------- */
 	
 	/**
@@ -314,6 +335,7 @@ public strictfp class Regression {
 	}
 	
 	/**
+	 * 
 	 * 
 	 * @param X -
 	 * @param Y - 
