@@ -15,7 +15,7 @@ public strictfp class Quartile{
 	 * This class is non-instansiable.
 	 */
 	private Quartile(){
-		//No body.
+		//No constructor body.
 	}
 
 	/**
