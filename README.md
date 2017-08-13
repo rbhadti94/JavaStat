@@ -1,4 +1,4 @@
-# RavMath - A Statistics Library
+# JavaStat - A Statistics Library
 
 * [Requirements](#requirements)
 * [What is RavMath?](#what-is-ravmath?)
@@ -36,10 +36,10 @@ RavMath is a multifunctional statistics library that allows users to carry out b
 
 This ranges from simple operations such as the mean & standard deviations to data-modelling operations such as linear regression.
 
-## Using RavMath
+## Using JavaStat
 Head over the [Releases](https://github.com/rbhadti94/RavMath/releases) section of the repository and download the latest stable release of this software.
 
-## Library Functionalities
+## Library Functions
 
 
 ### Basic Statistics
@@ -91,9 +91,6 @@ public static final double probExponential(double lambda, double x)
 //Returns P(X=x;lambda) for all x in [0,N]
 public static final double[] distExponential(double lambda, int xMax)
 ```
-
-
-
 
 ### Parametric Data Modelling
 
