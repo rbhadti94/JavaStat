@@ -1,4 +1,5 @@
-# JavaStat - A Statistics Library https://travis-ci.org/rbhadti94/JavaStat.svg?branch=master
+# JavaStat - A Statistics Library 
+![alt text] (https://travis-ci.org/rbhadti94/JavaStat.svg?branch=master) 
 
 * [Requirements](#requirements)
 * [What is JavaStat?](#what-is-JavaStat?)
