@@ -1,5 +1,5 @@
 /**
- * Class: RavMath.base.BasicStats 
+ * Class: JavaStat.base.BasicStats 
  * 
  * @author Ravindra Bhadti
  * @V0.2

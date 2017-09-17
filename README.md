@@ -1,8 +1,8 @@
 # JavaStat - A Statistics Library
 
 * [Requirements](#requirements)
-* [What is RavMath?](#what-is-ravmath?)
-* [Using RavMath](#using-ravmath)
+* [What is JavaStat?](#what-is-JavaStat?)
+* [Using JavaStat](#using-JavaStat)
 * [Library Functionalities](#library-functionalities)
   * [Basic Statistics](###basic-statistics)
   * [Probability Distribution Modelling](###probability-distribution-modelling)
@@ -31,13 +31,13 @@ The second option is to download the appropriate ```.deb``` package directly fro
 
 Navigate to [Oracle Site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and download the appropriate package.
 
-## What is RavMath?
-RavMath is a multifunctional statistics library that allows users to carry out basic and advanced statistic calculations on 1D and 2D datasets.
+## What is JavaStat?
+JavaStat is a multifunctional statistics library that allows users to carry out basic and advanced statistic calculations on 1D and 2D datasets.
 
 This ranges from simple operations such as the mean & standard deviations to data-modelling operations such as linear regression.
 
 ## Using JavaStat
-Head over the [Releases](https://github.com/rbhadti94/RavMath/releases) section of the repository and download the latest stable release of this software.
+Head over the [Releases](https://github.com/rbhadti94/JavaStat/releases) section of the repository and download the latest stable release of this software.
 
 ## Library Functions
 
@@ -48,7 +48,7 @@ Head over the [Releases](https://github.com/rbhadti94/RavMath/releases) section 
 ### Probability Distribution Modelling
 Probability distributions can be imported using:
 ```java
-import RavMath.statistics.Distributions
+import JavaStat.statistics.Distributions
 ```
 This contains
 
@@ -56,7 +56,7 @@ This contains
 ### Regression Analysis
 The regression analysis can be imported using:
 ```
-import RavMath.statistics.Regression
+import JavaStat.statistics.Regression
 ```
 
 

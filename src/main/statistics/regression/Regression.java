@@ -1,6 +1,6 @@
 /**
  * 
- * Class: RavMath.base.Distributions
+ * Class: JavaStat.base.Distributions
  * 
  * @author Ravindra Bhadti
  * @V0.2
