@@ -1,4 +1,4 @@
-# JavaStat - A Statistics Library [![Build Status](https://api.travis-ci.org/rbhadti94/JavaStat.svg)]
+# JavaStat - A Statistics Library ![Build Status](https://api.travis-ci.org/rbhadti94/JavaStat.svg)
 
 ![alt text] (https://travis-ci.org/rbhadti94/JavaStat.svg?branch=master) 
 
