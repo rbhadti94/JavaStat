@@ -1,1 +1,10 @@
 language: java
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
+    - os: osx
+      dist: *
+      sudo: required
