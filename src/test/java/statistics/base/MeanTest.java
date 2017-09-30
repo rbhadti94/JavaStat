@@ -53,7 +53,7 @@ public class MeanTest extends TestCase {
 	}
 
 	public void testMeanLongLongArray() {
-		long a = 23_004_324_239_384L;
+		long a = 23004324239384L;
 		assertTrue( (mean(a, longArr) - results[3]) < 10E1);
 	}
 	
