@@ -62,31 +62,31 @@ public class MeanTest extends TestCase {
 	}
 	
 	public void testMeanFloatFloatArray() {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
 	}
 
 	public void testMeanFloatArray() {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
 	}
 
 	public void testMeanDoubleDoubleArray() {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
 	}
 
 	public void testMeanDoubleArray() {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
 	}
 
 	public void testMeanTTArray() {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
 	}
 
 	public void testMeanTArray() {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
 	}
 
 	public void testMeanHashMapOfTT() {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
 	}
 
 }

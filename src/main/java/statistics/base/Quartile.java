@@ -5,9 +5,9 @@
  * @V0.2
  */
 
-package main.statistics.base;
+package main.java.statistics.base;
 
-import static main.statistics.base.Median.*;
+import static main.java.statistics.base.Median.*;
 
 public strictfp class Quartile{
 	

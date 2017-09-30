@@ -1,6 +1,6 @@
-package main.statistics.base;
+package main.java.statistics.base;
 
-import static main.statistics.base.Mean.*;
+import static main.java.statistics.base.Mean.*;
 
 public class StandardDeviation {
 

@@ -6,14 +6,14 @@
  * @V0.2
  */
 
-package main.statistics.regression;
+package main.java.statistics.regression;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import static main.statistics.base.Mean.*;
-import static main.statistics.base.StandardDeviation.*;
+import static main.java.statistics.base.Mean.*;
+import static main.java.statistics.base.StandardDeviation.*;
 
 public strictfp class Regression {
 
