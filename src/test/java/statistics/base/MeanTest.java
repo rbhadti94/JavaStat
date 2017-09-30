@@ -1,7 +1,7 @@
-package test.statistics.base;
+package test.java.statistics.base;
 
 import junit.framework.TestCase;
-import static main.statistics.base.Mean.*;
+import static main.java.statistics.base.Mean.*;
 
 public class MeanTest extends TestCase {
 
