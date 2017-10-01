@@ -30,9 +30,16 @@ public class MeanTest extends TestCase {
 	private float floatArr[] = {
 		1234.5678F, 6548.345065F, 78596745.3454968F, 2748578.432423F
 	};
+	private Float numberFloatArr[] = {
+		1234.5678F, 6548.345065F, 78596745.3454968F, 2748578.432423F
+	};
 	private double doubleArr[] = {
 		
 	};
+	private Double numberDoubleArr[] = {
+		
+	};
+
 
 
 			
@@ -108,8 +115,8 @@ public class MeanTest extends TestCase {
 		assertTrue( errorPerc < error_threshold );
 		errorPerc = 100*Math.abs(mean(numberLongArr) - results[2])/results[2];
 		assertTrue( errorPerc < error_threshold );
-		
-		//assertTrue( Math.abs(mean(numberLongArr) - results[2])    < 10E-1 );
+		errorPerc = 100*Math.abs(mean(numberFloatArr) - results[4]/results[4]);
+		assertTrue( errorPerc < error_threshold );
 		//assertTrue( (mean(numberFloatArr) - results[2])     < error_threshold); 
 		//assertTrue( (mean(numberDoubleArr) - results[2])    < error_threshold);
 		System.out.println("Mean Type Array Test 1 Passed");
