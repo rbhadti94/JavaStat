@@ -3,3 +3,12 @@ jdk:
   - oraclejdk8
   - oraclejdk9
   - openjdk8
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
+    - os: linux
+      dist: xenial
+      sudo: required
