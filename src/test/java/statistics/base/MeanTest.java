@@ -141,7 +141,6 @@ public class MeanTest extends TestCase {
 		errorPerc = 100*Math.abs( (mean(b, numberLongArr) - results[3] ))/results[3];
 		assertTrue( errorPerc < error_threshold );
 		
-		
 		errorPerc = 100*Math.abs( (mean(c, numberFloatArr) - results[5] ))/results[5];
 		assertTrue( errorPerc < error_threshold );
 		
