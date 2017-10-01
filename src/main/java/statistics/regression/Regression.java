@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+// Import other packages from this library.
 import static main.java.statistics.base.Mean.*;
 import static main.java.statistics.base.StandardDeviation.*;
 

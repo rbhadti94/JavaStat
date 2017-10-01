@@ -5,10 +5,10 @@ import java.util.HashMap;
 public class Mean {
 	
 	/**
-	 * 
+	 * This object cannot be instantiated. Only methods within this class can be used.
 	 */
 	private Mean(){
-		
+
 	}
 	
 	/**

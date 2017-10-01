@@ -5,6 +5,8 @@ import static main.java.statistics.base.Mean.*;
 
 public class MeanTest extends TestCase {
 
+	public static final double error_threshold = 10e-3;
+
 	/**
 	 * The test input arrays 
 	 */
@@ -24,11 +26,12 @@ public class MeanTest extends TestCase {
 	};
 	//
 	private double doubleArr[] = {
-			
+		
 	};
 			
 	/**
-	 * 
+	 * The results for each of the primitive types.
+	 * int, long, float and double
 	 */
 	private double results[] = {
 			7243.6428, 7041.1538, 4.4279930712264E+14, 3.82828595282178E+14
@@ -43,13 +46,15 @@ public class MeanTest extends TestCase {
 		
 	}
 
+
 	public void testMeanIntIntArray() {
 		int a = 9876;
-		assertTrue(Math.abs( mean(a, intArr) - results[0] ) < 10e-3 );
+		assertTrue(Math.abs( mean(a, intArr) - results[0] ) < error_threshold );
 	}
 
+
 	public void testMeanIntArray() {
-		assertTrue(Math.abs(mean(intArr) - results[1]) < 10e-3);
+		assertTrue(Math.abs(mean(intArr) - results[1]) < error_threshold );
 	}
 
 	public void testMeanLongLongArray() {
@@ -62,7 +67,7 @@ public class MeanTest extends TestCase {
 	}
 	
 	public void testMeanFloatFloatArray() {
-		//fail("Not yet implemented");
+
 	}
 
 	public void testMeanFloatArray() {
