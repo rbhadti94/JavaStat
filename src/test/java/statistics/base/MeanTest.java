@@ -34,10 +34,10 @@ public class MeanTest extends TestCase {
 		1234.5678F, 6548.345065F, 78596745.3454968F, 2748578.432423F
 	};
 	private double doubleArr[] = {
-		
+		1234.5678D, 6548.345065D, 78596745.3454968D, 2748578.432423D
 	};
 	private Double numberDoubleArr[] = {
-		
+		1234.5678D, 6548.345065D, 78596745.3454968D, 2748578.432423D
 	};
 
 
@@ -50,7 +50,8 @@ public class MeanTest extends TestCase {
 	private double results[] = {
 			7243.6428, 7041.1538, // Integer
 			4.4279930712264E+14, 3.82828595282178E+14, //Long
-			20338276.6726962, 63389592.38567265 //Float
+			20338276.6726962, 63389592.38567265, //Float
+			20338276.6726962, 0 //Double
 	};
 	
 	
@@ -102,11 +103,13 @@ public class MeanTest extends TestCase {
 	}
 
 	public void testMeanDoubleDoubleArray() {
-
+		
 		System.out.println("Mean Double 1 Test Passed");
 	}
 
 	public void testMeanDoubleArray() {
+		double errorPerc = 100*(Math.abs(mean(doubleArr) - results[6]))/results[6];
+		assert( errorPerc < error_threshold );
 		System.out.println("Mean Double 2 Test Passed");
 	}
 
@@ -119,9 +122,10 @@ public class MeanTest extends TestCase {
 
 		errorPerc = 100*Math.abs(mean(numberFloatArr) - results[4])/results[4];
 		assertTrue( errorPerc < error_threshold );
+
+		errorPerc = 100*Math.abs(mean(numberDoubleArr) - results[6])/results[6];
+		assertTrue( errorPerc < error_threshold );
 		
-		//assertTrue( (mean(numberFloatArr) - results[2])     < error_threshold); 
-		//assertTrue( (mean(numberDoubleArr) - results[2])    < error_threshold);
 		System.out.println("Mean Type Array Test 1 Passed");
 	}
 
